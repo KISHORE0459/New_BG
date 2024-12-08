@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { GoUpload } from "react-icons/go";
-import axios from 'axios';
+// import axios from 'axios';
 
 const Upload = () => {
     const [selectedFile, setSelectedFile] = useState(null);
@@ -26,7 +26,7 @@ const Upload = () => {
         preview.setAttribute('src','./src/assets/loading1.gif');
 
         try {
-            const response = await axios.post('http://localhost:5000/remove-bg', formData, {
+            const response = await fetch('http://localhost:5000/remove-bg', formData, {
                 responseType: 'blob', // Important to receive the file as binary data
             });
 
