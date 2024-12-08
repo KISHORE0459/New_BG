@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { GoUpload } from "react-icons/go";
-import{ removeimg} from './src/assets/bg-remove-image.png';
-import {removingimg} from './src/assets/loading1.gif';
+import{ removeimg} from 'frontend/src/assets/bg-remove-image.png';
+import {removingimg} from 'frontend/src/assets/loading1.gif';
 // import axios from 'axios';
 
 const Upload = () => {
