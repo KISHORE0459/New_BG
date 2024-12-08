@@ -28,10 +28,10 @@ app.get('*',(req,res)=>{
     res.sendFile(path.resolve(__dir ,'frontend','dist','index.html'));
 });
 
-// app.use(cors({
-//     origin: 'http://localhost:5173', // Allow requests from frontend
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   }));
+app.use(cors({
+    origin: `http://localhost:${port}`, // Allow requests from frontend
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  }));
 
 
 // app.use((req, res, next) => {
