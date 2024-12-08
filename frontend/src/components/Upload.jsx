@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { GoUpload } from "react-icons/go";
-import{ removeimg} from 'frontend/src/assets/bg-remove-image.png';
-import {removingimg} from 'frontend/src/assets/loading1.gif';
+// import{ removeimg} from 'frontend/src/assets/bg-remove-image.png';
+// import {removingimg} from 'frontend/src/assets/loading1.gif';
 // import axios from 'axios';
 
 const Upload = () => {
@@ -25,7 +25,7 @@ const Upload = () => {
         const formData = new FormData();
         formData.append('image', selectedFile);
 
-        preview.setAttribute('src',removingimg);
+        preview.setAttribute('src',"");
 
         try {
             const response = await fetch('http://localhost:5000/remove-bg', formData, {
@@ -55,7 +55,7 @@ const Upload = () => {
     return (
         <div className='flex flex-row flex-wrap w-full md:m-20'>
             <div className='w-full md:w-2/5 flex flex-row flex-wrap justify-center m-2 mt-5 md:p-5 border-2 border-blue-500 max-h-700px'>
-                <img src={removeimg} alt="" className='max-h-96' id='preview'/>
+                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuMVpwsONM1UQFr_bI68m5S6HFw-4xFUVL8Q&s' alt="" className='max-h-96' id='preview'/>
             </div>
             <form onSubmit={handleSubmit} className='w-full md:w-1/2 flex flex-col justify-center items-center m-2 mt-8'>
                 <input type="file" onChange={handleFileChange} className='hidden' id='input-image'/>
